@@ -1,0 +1,31 @@
+1、实现欢迎页面，倒计时2秒进入mainactivity
+2、在主页面实现底部菜单栏RadioGroup+Fragment共有四个按钮4个主要的页面
+   使用butterknife库 添加依赖implementation 'com.jakewharton:butterknife:10.0.0'
+                          annotationProcessor 'com.jakewharton:butterknife-compiler:10.0.0'
+                       同时添加compileOptions {
+                                   sourceCompatibility = '1.8'
+                                   targetCompatibility = '1.8'
+                               }
+                       然后在mainactivity中选中activity_main右键选Generate->butter...即可生成
+
+
+3、实现4个子页面后，在第一个页面使用OkHttp请求数据https://github.com/square/okhttp，并且使用fastJson解析传过来的json
+   然后展示在首页对应的位置处。
+   <1>OkHttp用法：找到第三方的库，首先implementation 'xxxx'引入库
+   <2>使用get请求方法，获取json
+
+   <3>fastJson用法：https://github.com/alibaba/fastjson引入implementation 'com.alibaba:fastjson:1.1.71.android'
+   <4>创建bean包新建一个类，引入插件settings->plugins->GsonFormat->install
+         选中整个json的所有内容，到bean下的类中 右键->Generate->GsonFormat->setting->ok->粘贴json内容->ok.
+         自动能够生成对应的方法，然后在在homefragment 中解析数据。
+4、实现首页的几个不同的子布局
+   <1>实现横幅轮播图：使用banner库进行配置，下载https://github.com/youth5201314/banner并且导入到工程中
+5、实现第二个页面的布局和页面数据的配置
+
+
+
+
+------------------------------------------------
+出现的问题：
+1、4个子fragment都能正常加载和切换，但是无法显示出页面
+   解决：mainActivity的布局影响到子页面的显示，把相对布局 改为 线性布局，成功显示子页面

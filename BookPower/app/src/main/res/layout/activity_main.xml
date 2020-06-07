@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff">
+
+    <FrameLayout
+        android:id="@+id/frameLayout"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"/>
+
+    <RadioGroup
+        android:id="@+id/rg_main"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:id="@+id/bt_main"
+            style="@style/MainButtonStyle"
+            android:drawableTop="@drawable/main_button_selector"
+            android:textColor="@drawable/button_text_selector"
+            android:text="首页"/>
+
+        <RadioButton
+            android:id="@+id/bt_collect"
+            style="@style/MainButtonStyle"
+            android:drawableTop="@drawable/collect_button_selector"
+            android:textColor="@drawable/button_text_selector"
+            android:text="我的收藏"/>
+
+        <RadioButton
+            android:id="@+id/bt_books"
+            style="@style/MainButtonStyle"
+            android:drawableTop="@drawable/books_button_selector"
+            android:textColor="@drawable/button_text_selector"
+            android:text="图书信息"/>
+
+        <RadioButton
+            android:id="@+id/bt_me"
+            style="@style/MainButtonStyle"
+            android:drawableTop="@drawable/me_button_selector"
+            android:textColor="@drawable/button_text_selector"
+            android:text="个人信息"/>
+    </RadioGroup>
+
+</LinearLayout>

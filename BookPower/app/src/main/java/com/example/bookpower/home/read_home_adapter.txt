@@ -1,0 +1,12 @@
+1、建立主页的适配器，在这个适配器中 有主页的所有的频道类型  比如：轮播图类型、类似淘宝的频道类型、活动类型、
+折扣类型等，所有的类型都可以进行初始化，给予一个整形的数据。
+2、初始化页面中的子布局并且获得JSON数据
+3、获取对应不同的类型
+4、onCreateViewHolder用于创建ViewHodler然后进行下一步
+5、onBindViewHolder绑定数据，才能显示出效果
+------------------------------------------------------
+创建BANNER类型      https://github.com/youth5201314/banner
+【1】 在onCreateViewHolder中通过if判断类型，为BANNER时返回，目的是创建一个BANNER的ViewHolder
+        （然后创建一个对应的适配器）
+【2】 在主页面中创建一个适配器class BannerViewHolder extends RecyclerView.ViewHolder
+【3】 在onBindViewHolder中绑定每个类型对应的适配器内部类,其他类型都是一样的套路
